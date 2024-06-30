@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+nav{
+    background-color: #081621;
+}
+
+nav .container{
+    /* background-color: #FFF; */
+    width: 1200px;
+    margin: auto;
+    
+}
+
+nav .row ul li:hover{
+    background-color: red;
+}
+
+nav .row{
+    display: flex;
+    justify-content: center;
+}
+
+nav .row ul li{
+    display: inline-block;
+}
+nav .row ul li a{
+    padding: 20px 10px ;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif
+    font-weight: 500;
+    position: relative;
+}
+
+
+nav .row ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav .row ul li a:hover::after{
+    width: 100%;
+    
+    }
+
+nav .menu_1{
+    background-color: rgb(35, 235, 65);
+    position: absolute;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    top: 100px;
+}  
+
+nav .menu_1 li{
+    display: block;
+    width: 200px;
+}
+
+nav .menu_1 li a{
+    width: 100%;
+    text-align: center;
+}
+
+nav ul .link_1:hover .menu_1{
+    opacity: 1;
+    top: 58px;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+
+
+
+
+.test{
+    background-color: #08054f;
+    height: 100vh;
+    position: relative;
+
+}
+
+.test button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+   
+
+}   
+
+.test button::before{
+    content:'' ;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: violet;
+    top: 0;
+    left: 0;
+    transition: 0.6s;   
+}
+
+.test button:hover::before{
+    width: 100%;
+    color: white;
+}
+.test button::after{
+    content:'' ;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: violet;
+    bottom: 0;
+    right: 0;
+    transition: 0.6s;
+}
+
+.test button:hover::after{
+    width: 100%;
+    color: white;
+}
+
+.test button:hover{
+    color: white;
+    background: red;
+}
